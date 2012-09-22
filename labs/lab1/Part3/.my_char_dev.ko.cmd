@@ -1,0 +1,1 @@
+cmd_/home/penke/18648/labs/lab1/Part3/my_char_dev.ko := arm-none-linux-gnueabi-ld -r  -T /home/penke/18648/tegra/scripts/module-common.lds --build-id  -o /home/penke/18648/labs/lab1/Part3/my_char_dev.ko /home/penke/18648/labs/lab1/Part3/my_char_dev.o /home/penke/18648/labs/lab1/Part3/my_char_dev.mod.o

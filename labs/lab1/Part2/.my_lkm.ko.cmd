@@ -1,0 +1,1 @@
+cmd_/home/penke/18648/labs/lab1/Part2/my_lkm.ko := arm-none-linux-gnueabi-ld -r  -T /home/penke/18648/tegra/scripts/module-common.lds --build-id  -o /home/penke/18648/labs/lab1/Part2/my_lkm.ko /home/penke/18648/labs/lab1/Part2/my_lkm.o /home/penke/18648/labs/lab1/Part2/my_lkm.mod.o
