@@ -21,8 +21,6 @@ mkdir linux
 
 cd ../
 
-cp ../../arch/arm/include/asm/unistd.h arch/arm/include/asm/.
-cp ../../arch/arm/kernel/calls.S arch/arm/kernel/.
-cp ../../include/linux/syscalls.h include/linux/.
-
-
+cp ../../tegra/arch/arm/include/asm/unistd.h arch/arm/include/asm/unistd.h
+cp ../../tegra/arch/arm/kernel/calls.S arch/arm/kernel/calls.S
+cp ../../tegra/include/linux/syscalls.h include/linux/syscalls.h
