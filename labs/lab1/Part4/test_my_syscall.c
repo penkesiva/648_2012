@@ -8,19 +8,20 @@
 
 #include <stdio.h>
 #include <linux/unistd.h>
-//#include <linux/syscalls.h>
 
-#define __NR_mycall 361
+#define __NR_mycall 376
 
 int main(int argc, char * argv[])
 {
         unsigned long ret = 0;
         unsigned int i;
-        for(i=10; i>0; i--)
-        {
-                ret = syscall(__NR_mycall, 100, i);
-                printf("**Sum of [100] and [%u] is [%u]\r\n", i, ret);
-        }
+
+	if(argc != 2)
+		printf("Usage: <app> x y\r\n");
+	else{
+	        ret = syscall(__NR_mycall, atoi(argv[1]), argv[2], 0, &ret);
+                printf("Sum: %d\r\n", i, ret);
+	}
 
         return 0;
 

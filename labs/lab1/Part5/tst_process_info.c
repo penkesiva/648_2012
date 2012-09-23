@@ -16,16 +16,13 @@ int main(void)
 	unsigned count=0;
 	long ret=0, retval=0;
 
-	count = syscall(362);
-
+	count = syscall(377);
 	process =  malloc(count*sizeof(struct my_struct));
-		
 	var = malloc(count*sizeof(struct my_struct));
+	if(process == NULL || var == NULL)  
+		exit(-1);
 
-	if(process == NULL || var == NULL)  exit(-1);
-
-	retval = syscall(363, &process);
-
+	retval = syscall(378, &process);
 	for(i=0; i<count; i++)
 		printf("PROCESS:[%s], PID:[%d], PRIO:[%d]\r\n", (process+i)->name, (process+i)->pid, (process+i)->prio);
 

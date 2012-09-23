@@ -19,7 +19,7 @@ int main(void)
 
 	while(1) 
 	{
-		count = syscall(362);
+		count = syscall(377);
 
 		process =  malloc(count*sizeof(struct my_struct));
 		
@@ -28,7 +28,7 @@ int main(void)
 		if(process == NULL || var == NULL)
 			exit(-1);
 
-		retval = syscall(363, &process);
+		retval = syscall(378, &process);
 
 		printf("Running task information in decending order:\r\n");
 

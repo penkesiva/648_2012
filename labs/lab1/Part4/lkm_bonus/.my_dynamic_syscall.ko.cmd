@@ -1,0 +1,1 @@
+cmd_/home/penke/18648/labs/lab1/Part4/lkm_bonus/my_dynamic_syscall.ko := arm-none-linux-gnueabi-ld -r  -T /home/penke/18648/tegra/scripts/module-common.lds --build-id  -o /home/penke/18648/labs/lab1/Part4/lkm_bonus/my_dynamic_syscall.ko /home/penke/18648/labs/lab1/Part4/lkm_bonus/my_dynamic_syscall.o /home/penke/18648/labs/lab1/Part4/lkm_bonus/my_dynamic_syscall.mod.o

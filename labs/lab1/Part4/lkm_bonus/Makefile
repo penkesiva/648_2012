@@ -1,7 +1,20 @@
+#Makefile for rk kernel modules for i386
+
+KDIR=../../../../tegra
+
+AS		= $(CROSS_COMPILE)as
+LD		= $(CROSS_COMPILE)ld
+CC		= $(CROSS_COMPILE)gcc
+AR		= $(CROSS_COMPILE)ar
+NM		= $(CROSS_COMPILE)nm
+STRIP		= $(CROSS_COMPILE)strip
+OBJCOPY		= $(CROSS_COMPILE)objcopy
+OBJDUMP		= $(CROSS_COMPILE)objdump
+
 obj-m += my_dynamic_syscall.o
+
 all:	
-	make arch=ARM CROSS_COMPILE=/home/vm18648/src/droid/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi- KERNEL_DIR=~/src/droid/omap -C /home/vm18648/src/droid/omap M=$(shell pwd) modules
+	make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- -C $(KDIR) M=$(PWD) modules 
 
-clean: 
-	make arch=ARM CROSS_COMPILE=/home/vm18648/src/droid/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi- KERNEL_DIR=~/src/droid/omap -C /home/vm18648/src/droid/omap M=$(PWD) clean
-
+clean:		
+	make ARCH=arm CROSS_COMPILE=arm-none-linux-gnueabi- -C $(KDIR) M=$(PWD) clean	
