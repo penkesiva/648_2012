@@ -15,6 +15,7 @@
 #include <linux/slab.h>
 #include <linux/slab_def.h>
 #include <linux/errno.h>
+
 #define OK 	0
 #define NOK 	1
 #define DEVICE_NAME 	"my_char_dev"	/* Dev name as it appears in /proc/devices */
