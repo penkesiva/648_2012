@@ -36,7 +36,7 @@ int main(void)
 		{
 			for(j=i+1;j<count;j++)
 			{
-				if((process+i)->prio > (process+j)->prio)
+				if((process+i)->prio < (process+j)->prio)
 				{	/* swap the processes */
 					var->prio = (process+j)->prio;
 					var->pid = (process+j)->pid;
@@ -85,7 +85,7 @@ int main(void)
 		refresh();
 #endif
 		//printf("****y:%d, x:%d\r\n", y, x);
-		count = 15;
+		count = 20;
 		for(i=0; i<count; i++){
 			printf("PROCESS:%16s\t PID:%4d\t PRIO:%4d\t\n", (process+i)->pid_name, (process+i)->pid, (process+i)->prio);
 		}
