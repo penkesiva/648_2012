@@ -500,6 +500,16 @@ deps_/home/penke/18648/labs/lab1/Part3/my_char_dev.o := \
   include/linux/aio.h \
   include/linux/aio_abi.h \
   include/linux/uio.h \
+  include/linux/slab.h \
+    $(wildcard include/config/slab/debug.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/slob.h) \
+    $(wildcard include/config/debug/slab.h) \
+    $(wildcard include/config/slab.h) \
+  include/linux/slab_def.h \
+  include/trace/events/kmem.h \
+  include/trace/events/gfpflags.h \
+  include/linux/kmalloc_sizes.h \
 
 /home/penke/18648/labs/lab1/Part3/my_char_dev.o: $(deps_/home/penke/18648/labs/lab1/Part3/my_char_dev.o)
 

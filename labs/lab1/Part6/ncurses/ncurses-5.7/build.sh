@@ -1,0 +1,1 @@
+./configure arm-linux --host=arm-none-linux-gnueabi --with-shared --without-ada --with-build-cc=gcc --with-build-cpp=arm-none-linux-gnueabi-g++ --disable-big-core --enable-termcap --prefix=/opt/arm-2011.09 --disable-GPM

@@ -13,14 +13,14 @@
 
 int main(int argc, char * argv[])
 {
-        unsigned long ret = 0;
-        unsigned int i;
+        unsigned long ret=0;
+	int flag;
 
-	if(argc != 2)
+	if(argc != 3)
 		printf("Usage: <app> x y\r\n");
 	else{
-	        ret = syscall(__NR_mycall, atoi(argv[1]), argv[2], 0, &ret);
-                printf("Sum: %d\r\n", i, ret);
+	        ret = syscall(__NR_mycall, atoi(argv[1]), atoi(argv[2]), &flag);
+                printf("Sum: %d\r\n", flag);
 	}
 
         return 0;
